@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, serif;
+    color: #333;
+    background: #fffaf7;
+}
+
+/* NAVBAR */
+header {
+    background: white;
+    padding: 20px 7%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #a64d70;
+}
+
+nav ul {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #a64d70;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+        url("images/makeup-background.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    color: white;
+    max-width: 750px;
+    padding: 30px;
+}
+
+.small-title {
+    font-size: 18px;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 70px;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 15px 32px;
+    background: #b85f7d;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 17px;
+}
+
+.btn:hover {
+    background: #963f60;
+}
+
+/* SECTIONS */
+section {
+    padding: 90px 7%;
+}
+
+section h2 {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.section-title {
+    color: #b85f7d;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* ABOUT */
+.about {
+    text-align: center;
+    background: #fffaf7;
+}
+
+.about-text {
+    max-width: 800px;
+    margin: auto;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* SERVICES */
+.services {
+    text-align: center;
+    background: #fdf0f4;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.service-card h3 {
+    color: #a64d70;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* GALLERY */
+.gallery {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.gallery-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 10px;
+    scroll-behavior: smooth;
+    flex-wrap: nowrap;
+}
+
+.gallery-item {
+    flex: 0 0 280px;
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+}
+
+.gallery-item h3 {
+    margin-top: 12px;
+    font-size: 18px;
+}
+
+.gallery-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.gallery-scroll::-webkit-scrollbar-thumb {
+    background: #d8a2b4;
+    border-radius: 10px;
+}
+
+/* CONTACT & APPOINTMENT SLOTS */
+.contact {
+    text-align: center;
+    background: #fdf0f4;
+}
+
+form {
+    max-width: 600px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #a64d70;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+input,
+select {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    font-family: inherit;
+}
+
+/* Time Slots Styling */
+.slots-wrapper {
+    margin: 10px 0;
+}
+
+.slots-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.slot-btn {
+    padding: 12px 10px;
+    background: white;
+    color: #a64d70;
+    border: 2px solid #b85f7d;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slot-btn:hover {
+    background: #fbe4ec;
+}
+
+.slot-btn.active {
+    background: #b85f7d;
+    color: white;
+    box-shadow: 0 4px 10px rgba(184, 95, 125, 0.3);
+}
+
+.slot-btn.booked {
+    background: #e0e0e0;
+    color: #888;
+    border-color: #ccc;
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+
+.error-msg {
+    color: #d93025;
+    font-size: 14px;
+    margin-top: 8px;
+    display: none;
+}
+
+.submit-btn {
+    padding: 16px;
+    background: #b85f7d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #963f60;
+}
+
+/* FOOTER */
+footer {
+    background: #39232d;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+footer h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 8px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+
+    .slots-container {
+        grid-template-columns: 1fr;
+    }
+}
